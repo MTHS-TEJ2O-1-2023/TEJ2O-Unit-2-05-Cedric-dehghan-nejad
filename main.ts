@@ -3,6 +3,20 @@
  * Created by: Mr. Coxall
  * Created on: Sep 2020
  * This program ...
+ * /// this program tell the temperature
 */
 
-basic.showString('Hello, World!')
+// our variable for a random number
+let temperature: number
+
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+input.onButtonPressed(Button.A, function () {
+  temperature = input.temperature() + (273.15)
+  temperature = Math.round(temperature) 
+  
+  basic.showString('temperature is')
+  basic.showNumber(temperature)
+  basic.showString('K')
+ })
