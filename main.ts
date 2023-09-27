@@ -1,20 +1,21 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
+ * Created by: Cedric
+ * Created on: Sep 2023
  * This program ...
- * /// this program tell the temperature
+ * /// this program tell the temperature in kelvin
 */
-
 // our variable for a random number
-let temperature: number
+let temperatureCelsius: number
+let temperatureKelvin: number
 
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
-  temperature = input.temperature() + (273.15)
-  temperature = Math.round(temperature) 
-  
-  basic.showString('temperature is: ' + temperature.toString() + 'K')
- })
+  temperatureCelsius = input.temperature()
+  temperatureKelvin = temperatureCelsius + 273.15
+  temperatureKelvin = Math.round(temperatureKelvin)
+
+  basic.showString('temperature is: ' + (temperatureKelvin).toString() + 'K')
+})
