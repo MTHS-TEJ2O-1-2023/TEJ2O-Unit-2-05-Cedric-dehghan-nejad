@@ -13,6 +13,7 @@ basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
+  temperature = input.temperature()
   temperature = input.temperature() + 273.15
   temperature = Math.round(temperature)
 
