@@ -7,15 +7,15 @@
 */
 
 // our variable for a random number
-let temperature: number
+let temperatureCelsius: number
+let temperatureKelvin: number
 
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
-  temperature = input.temperature()
-  temperature = input.temperature() + 273.15
-  temperature = Math.round(temperature)
+  temperatureKelvin = temperatureCelsius  + 273.15
+  temperatureKelvin = Math.round(temperatureCelsius)
 
-  basic.showString('temperature is: ' + temperature.toString() + 'K')
+  basic.showString('temperature is: ' + (temperatureKelvin).toString() + 'K')
 })
